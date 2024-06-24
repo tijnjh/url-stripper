@@ -1,36 +1,43 @@
 [
   {
     "domain": true,
+    "path": "*",
     "type": 1,
     "params": ["q"]
   },
   {
     "domain": "google.com",
+    "path": "/search",
     "type": 1,
     "params": ["udm", "q"]
   },
   {
     "domain": "x.com",
+    "path": "*",
     "type": 0,
     "params": ["s"]
   },
   {
     "domain": "youtu.be",
+    "path": "*",
     "type": 1,
     "params": ["t"]
   },
   {
     "domain": "youtube.com",
+    "path": "*",
     "type": 1,
     "params": ["v", "t"]
   },
   {
     "domain": "temu.com",
+    "path": "*",
     "type": 1,
     "params": ["goods_id"]
   },
   {
     "domain": "github.com",
+    "path": "*",
     "type": 0,
     "params": ["tab"]
   }
