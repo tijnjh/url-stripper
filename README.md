@@ -3,6 +3,7 @@ with this cli you can quickly remove tracking paramaters from URLs
 
 ## Usage
 Clone this repo
+
 Make sure Cargo is installed
 
 ```
