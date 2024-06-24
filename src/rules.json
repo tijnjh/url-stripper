@@ -1,5 +1,10 @@
 [
   {
+    "domain": true,
+    "type": 1,
+    "params": ["q"]
+  },
+  {
     "domain": "google.com",
     "type": 1,
     "params": ["udm", "q"]
@@ -18,11 +23,6 @@
     "domain": "youtube.com",
     "type": 1,
     "params": ["v", "t"]
-  },
-  {
-    "domain": true,
-    "type": 1,
-    "params": ["q"]
   },
   {
     "domain": "temu.com",
