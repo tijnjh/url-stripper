@@ -28,5 +28,10 @@
     "domain": "temu.com",
     "type": 1,
     "params": ["goods_id"]
+  },
+  {
+    "domain": "github.com",
+    "type": 0,
+    "params": ["tab"]
   }
 ]
