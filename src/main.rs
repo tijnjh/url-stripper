@@ -7,12 +7,14 @@ use std::fs;
 use url::Url;
 
 const RULES_FILE_PATH: &str = "./src/rules.json";
+const TYPE_BLACKLIST: u8 = 0;
+const TYPE_WHITELIST: u8 = 0;
 
 #[derive(Deserialize, Debug)]
 struct Rule {
     domain: Value,
     #[serde(rename = "type")]
-    type_field: i32,
+    type_field: u8,
     params: Vec<String>,
 }
 
@@ -64,8 +66,7 @@ fn main() {
             println!("{} {}", "Detected URL:".green(), rule_domain);
 
             for (key, val) in input_url.query_pairs() {
-                if rule.type_field == 0 {
-                    // blacklist
+                if rule.type_field == TYPE_BLACKLIST {
                     if !rule.params.contains(&key.to_string())
                         && !applied_params.contains(&key.to_string())
                     {
@@ -74,8 +75,7 @@ fn main() {
                             .append_pair(&key.to_string(), &val.to_string());
                         applied_params.insert(key.to_string());
                     }
-                } else if rule.type_field == 1 {
-                    // whitelist
+                } else if rule.type_field == TYPE_WHITELIST {
                     if rule.params.contains(&key.to_string())
                         && !applied_params.contains(&key.to_string())
                     {
